@@ -1,0 +1,136 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+#task-form,
+#task-list {
+    margin-bottom: 2rem;
+}
+
+#task-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#task-form form label {
+    font-weight: bold;
+}
+
+#task-form form input,
+#task-form form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#task-form form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+#task-list .search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#task-list .search-filter input,
+#task-list .search-filter select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tasks li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+#tasks li span {
+    flex: 1;
+}
+
+#tasks li button {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    #task-form form,
+    #task-list .search-filter {
+        flex-direction: column;
+    }
+
+    #tasks li {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #tasks li button {
+        margin-left: 0;
+    }
+}
+
+button:hover {
+    background-color: #9b3f3f;
+}
