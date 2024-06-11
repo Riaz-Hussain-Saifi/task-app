@@ -1,136 +1,157 @@
-/* styles.css */
-
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
 }
 
-header {
-    background-color: #333;
-    padding: 1rem;
-}
-
-header nav ul {
+/* Navigation styles */
+nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
     display: flex;
     justify-content: space-around;
-}
-
-header nav ul li {
+    background-color: #333;
     margin: 0;
 }
 
-header nav ul li a {
-    color: white;
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
     text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    display: block;
 }
 
-main {
-    padding: 1rem;
+nav ul li a:hover {
+    background-color: #575757;
 }
 
-h1 {
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-#task-form,
-#task-list {
-    margin-bottom: 2rem;
+/* Section styles */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#task-form form {
+/* Form styles */
+form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
 }
 
-#task-form form label {
-    font-weight: bold;
-}
-
-#task-form form input,
-#task-form form textarea {
-    padding: 0.5rem;
-    font-size: 1rem;
+form input,
+form textarea,
+form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-#task-form form button {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #333;
+form button {
+    background-color: #4CAF50;
     color: white;
+    border: none;
     cursor: pointer;
 }
 
-#task-list .search-filter {
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Task list styles */
+#tasks-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    align-items: center;
 }
 
-#task-list .search-filter input,
-#task-list .search-filter select {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.task.completed {
+    text-decoration: line-through;
+    color: #777;
 }
 
-#tasks {
-    list-style-type: none;
-    padding: 0;
+/* Contact form styles */
+#contact-form {
+    max-width: 600px;
+    margin: auto;
 }
 
-#tasks li {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
 }
 
-#tasks li span {
-    flex: 1;
-}
-
-#tasks li button {
-    margin-left: 1rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-}
-
+/* Responsive styles for mobile devices */
 @media (max-width: 600px) {
-
-    #task-form form,
-    #task-list .search-filter {
+    nav ul {
         flex-direction: column;
     }
 
-    #tasks li {
+    nav ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .task {
         flex-direction: column;
-        gap: 0.5rem;
+        align-items: flex-start;
     }
 
-    #tasks li button {
-        margin-left: 0;
+    .task div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
     }
-}
 
-button:hover {
-    background-color: #9b3f3f;
+    .task button {
+        width: 48%;
+    }
+
+    #search {
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 0.9em;
+    }
 }

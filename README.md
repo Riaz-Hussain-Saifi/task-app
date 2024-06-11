@@ -24,11 +24,11 @@ task-manager/
 |-- tasks.html
 |-- about.html
 |-- contact.html
+|-- tsconfig.json
 |-- css/
-|   |-- styles.css
+|    |-- styles.css
 |-- js/
-|   |-- main.js
-|   |-- tasks.js
+|    |-- main.js
 |-- README.md
 ```
 
